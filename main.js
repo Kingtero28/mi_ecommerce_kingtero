@@ -105,7 +105,7 @@ contentCartBody.addEventListener("click", (e) => {
 
     if (e.target.classList.contains("bx-trash")) {
         const idShoe = +e.target.parentElement.id;
-        contTotal.innerHTML = +contTotal.innerHTML-(cart[idShoe].price);
+        contTotal.innerHTML = +contTotal.innerHTML-(cart[idShoe].price)*(cart[idShoe].amount);
         delete cart[idShoe];
     }
 
